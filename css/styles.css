@@ -1,15 +1,3 @@
-/* основной цвет текста #212121; */
-/* вторичный цвет текста #757575; */
-/* цвет акцента #2196F3; */
-/* Белый #FFFFFF; */
-/* Черный для лого #000000; */
-/* Белый с прозрачностью rgba(255, 255, 255, 0.6); */
-
-/* цвет фона в хедере #FFFFFF; */
-/* цвет фона героя и футера #2F303A; */
-/* цвет фона главный #E5E5E5; */
-/* цвет фона вторичный #F5F4FA; */
-
 :root {
   --primary-text-color: #212121;
   --secondary-text-color: #757575;
@@ -84,6 +72,15 @@ body {
 .site-nav .link.current {
   color: var(--accent-text-color);
 }
+
+.site-nav .link.current::after{
+  width: 100%;
+  height: 4px;
+  
+  background-color: var(--accent-text-color);
+  border-radius: 2px;
+}
+
 
 .site-nav .link:hover,
 .site-nav .link:focus,
@@ -639,4 +636,34 @@ background-color: var(--accent-text-color);
 img {
   display: block;
   min-width: 100%;
+}
+
+/* ---------------Overlay--------------- */
+.card:hover .overlay-text{
+  display: block;
+}
+
+.overlay{
+  position: relative;
+  z-index: 0;
+}
+
+.overlay-text{
+  position: absolute;
+  padding: 63px 24px;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  display: none;
+
+  background-color: rgba(33, 150, 243, 0.9);
+  color: #FFFFFF;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
 }
